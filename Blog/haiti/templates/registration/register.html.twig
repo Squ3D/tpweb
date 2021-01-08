@@ -1,0 +1,35 @@
+{# /app/templates/registration/register.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+
+    {# If there are any errors on the form, display them #}
+    {% set formErrors = registrationForm.vars.errors.form.getErrors(true) %}
+    {% if formErrors|length %}
+        <div class="alert alert-danger">
+            <ul>
+                {% for error in formErrors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {# Render the Form #}
+    <div id="loginBox">
+    {{ form_start(registrationForm) }}
+    &nbsp
+    {{ form_row(registrationForm.username) }}
+    &nbsp
+    {{ form_row(registrationForm.email) }}
+    &nbsp
+    {{ form_row(registrationForm.plainPassword) }}
+      
+
+        <button class="btn btn-lg btn-primary">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

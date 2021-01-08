@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			
+				<img src={{post.url}} class="" alt="...">
+
+				<h1>{{post.title}}</h1>
+				<p class="card-text">{{post.content}}</p>
+                 <p>Categorie :  {{post.Category.name}}</p>
+				<p>{{post.author}}
+					-
+					{{post.createdAt |date("d/m/Y")}}
+                 
+			</div>
+            	<a class="btn" href="/blog">Retour</a>
+		</div>
+	</div>
+</div>{% endblock %}

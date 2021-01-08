@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			{% for post in posts %}
+				<div class="col-md-4">
+					<div class="card">
+						<img src={{post.url}} class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{post.title}}</h5>
+							<p class="card-text">{{post.content}}</p>
+                            <p>Categorie :  {{post.Category.name}}</p>
+							<p>{{post.author}}
+								-
+								{{post.createdAt |date("d/m/Y")}}</p>
+							<center><a href="/posts/{{post.id}}" class="btn btn-primary">Lire la suite</a></center>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+{% endblock %}
