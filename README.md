@@ -35,6 +35,8 @@ Partie 3 :
   Importer le fichier Haiti.Sql pour avoir un jeu de données
   L'index du blog ce situe ici : http://localhost:8000/blog
   
+  ![myimage-alt-tag](https://i.gyazo.com/be0e1e3422818a447de97902bd87a785.png)
+  
   Prévisualtion du blog : https://i.gyazo.com/be0e1e3422818a447de97902bd87a785.png
 
 
